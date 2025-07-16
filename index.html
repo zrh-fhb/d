@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>领取淘宝闪购红包</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    .success {
+      font-size: 18px;
+      color: green;
+      margin-top: 20px;
+    }
+    .fallback {
+      color: red;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #ff5000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>正在为您领取淘宝闪购红包…</h2>
+<div id="result"></div>
+
+<script>
+  const kouling1 = "17 HU7405   1:/₴iLsO4cGBZ68";  // 主口令，请替换
+  const kouling2 = "￥iLsO4cGBZ68￥/ HU7405";  // 备用口令，请替换
+
+  async function copyKouling() {
+    let result = document.getElementById('result');
+
+    try {
+      await navigator.clipboard.writeText(kouling1);
+      result.innerHTML = '<div class="success">✅ 已复制闪购红包口令，请打开淘宝APP领取</div>';
+    } catch (e1) {
+      try {
+        await navigator.clipboard.writeText(kouling2);
+        result.innerHTML = '<div class="success">✅ 已复制备用红包口令，请打开淘宝APP领取</div>';
+      } catch (e2) {
+        result.innerHTML = `
+          <div class="fallback">
+            ❌ 自动复制失败，请长按以下口令手动复制：<br><br>
+            <strong>${kouling1}</strong>
+          </div>
+        `;
+        return;
+      }
+    }
+
+    // 复制成功后尝试调起淘宝APP
+    setTimeout(() => {
+      window.location.href = "taobao://";
+    }, 1500);
+  }
+
+  copyKouling();
+</script>
+
+</body>
+</html>
