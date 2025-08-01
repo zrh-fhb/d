@@ -1,73 +1,458 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <title>领取淘宝闪购红包</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" /> 
+  <meta name="format-detection" content="telephone=no,email=no,adress=no" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta http-equiv="Cache-Control" content="no-siteapp" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" /> 
+  <!--<link rel="stylesheet" type="text/css" href="http://cdn.6-y.cn/style12.css" /> -->
+  <!--<link rel="stylesheet" type="text/css" href="http://cdn.6-y.cn/layer.css" /> -->
+  <!--<script src="https://libs.cdnjs.net/jquery/3.5.1/jquery.min.js"></script>-->
+  <!--<script src="https://libs.cdnjs.net/clipboard.js/2.0.6/clipboard.min.js"></script>-->
+  <!--<link href="http://img.alicdn.com/tfs/TB1XlF3RpXXXXc6XXXXXXXXXXXX-16-16.png" rel="shortcut icon" type="image/x-icon">-->
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 30px;
-    }
-    .success {
-      font-size: 18px;
-      color: green;
-      margin-top: 20px;
-    }
-    .fallback {
-      color: red;
-      margin-top: 20px;
-    }
-    .btn {
-      padding: 12px 24px;
-      font-size: 16px;
-      background-color: #ff5000;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
+      body.cms {
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.cms {
+    background-color: #f6f6f6;
+    font-family: Hiragino Sans GB,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    -webkit-touch-callout: none;
+    background-color: #f6f6f6;
+    padding: 0;
+    margin: 0;
+}
+.cms * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cms .details-mode9 {
+    background-size: contain;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    font-size: 0;
+}
+.cms .details-mode9 .details-back {
+    width: 100%;
+}
+.cms img {
+    vertical-align: middle;
+}
+.cms .details-mode9 .details-code .keycopy {
+    background: #ff4400;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    color: #ff002d;
+    border: none;
+    font-size: 16px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 15%;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+    border-radius: 5px;
+}
+.cms .details-mode9 .details-code .code-ios, .cms .details-mode9 .details-code .code-android {
+    color: #7f4900;
+    width: 78%;
+    margin-left: 11%;
+    text-align: center;
+    padding: 0;
+    display: none;
+}
+.cms .details-mode9 .details-code {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    top: 80%;
+}
+      .layui-m-layercont{
+			padding: 15px !important;
+		}
+		body .layui-m-layer .layui-m-layer-msg{
+			bottom: 0px;
+		}
+		.cms .details-mode9 .details-code .keycopy{
+		    background:none;
+		}
+		.keycopy{
+		    animation:a .7s infinite;
+	        -webkit-animation:a .7s infinite;
+		}
+		@keyframes a{
+        	0%   {transform:scale(1) translateX(-50%)}
+        	50%  {transform:scale(1.15) translateX(-43%)}
+        	100% {transform:scale(1) translateX(-50%)}
+        }
+        body{
+            margin:0px;
+        }
+        .layui-m-layer{position:relative;z-index:19891014}.layui-m-layer *{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}.layui-m-layermain,.layui-m-layershade{position:fixed;left:0;top:0;width:100%;height:100%}.layui-m-layershade{background-color:rgba(0,0,0,.7);pointer-events:auto}.layui-m-layermain{display:table;font-family:Helvetica,arial,sans-serif;pointer-events:none}.layui-m-layermain .layui-m-layersection{display:table-cell;vertical-align:middle;text-align:center}.layui-m-layerchild{position:relative;display:inline-block;text-align:left;background-color:#fff;font-size:14px;border-radius:5px;box-shadow:0 0 8px rgba(0,0,0,.1);pointer-events:auto;-webkit-overflow-scrolling:touch;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:.2s;animation-duration:.2s}@-webkit-keyframes layui-m-anim-scale{0%{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}@keyframes layui-m-anim-scale{0%{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}.layui-m-anim-scale{animation-name:layui-m-anim-scale;-webkit-animation-name:layui-m-anim-scale}@-webkit-keyframes layui-m-anim-up{0%{opacity:0;-webkit-transform:translateY(800px);transform:translateY(800px)}100%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes layui-m-anim-up{0%{opacity:0;-webkit-transform:translateY(800px);transform:translateY(800px)}100%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}.layui-m-anim-up{-webkit-animation-name:layui-m-anim-up;animation-name:layui-m-anim-up}.layui-m-layer0 .layui-m-layerchild{width:90%;max-width:640px}.layui-m-layer1 .layui-m-layerchild{border:none;border-radius:0}.layui-m-layer2 .layui-m-layerchild{width:auto;max-width:260px;min-width:40px;border:none;background:0 0;box-shadow:none;color:#fff}.layui-m-layerchild h3{padding:0 10px;height:60px;line-height:60px;font-size:16px;font-weight:400;border-radius:5px 5px 0 0;text-align:center}.layui-m-layerbtn span,.layui-m-layerchild h3{text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.layui-m-layercont{padding:50px 30px;line-height:22px;text-align:center}.layui-m-layer1 .layui-m-layercont{padding:0;text-align:left}.layui-m-layer2 .layui-m-layercont{text-align:center;padding:0;line-height:0}.layui-m-layer2 .layui-m-layercont i{width:25px;height:25px;margin-left:8px;display:inline-block;background-color:#fff;border-radius:100%;-webkit-animation:layui-m-anim-loading 1.4s infinite ease-in-out;animation:layui-m-anim-loading 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.layui-m-layerbtn,.layui-m-layerbtn span{position:relative;text-align:center;border-radius:0 0 5px 5px}.layui-m-layer2 .layui-m-layercont p{margin-top:20px}@-webkit-keyframes layui-m-anim-loading{0%,100%,80%{transform:scale(0);-webkit-transform:scale(0)}40%{transform:scale(1);-webkit-transform:scale(1)}}@keyframes layui-m-anim-loading{0%,100%,80%{transform:scale(0);-webkit-transform:scale(0)}40%{transform:scale(1);-webkit-transform:scale(1)}}.layui-m-layer2 .layui-m-layercont i:first-child{margin-left:0;-webkit-animation-delay:-.32s;animation-delay:-.32s}.layui-m-layer2 .layui-m-layercont i.layui-m-layerload{-webkit-animation-delay:-.16s;animation-delay:-.16s}.layui-m-layer2 .layui-m-layercont>div{line-height:22px;padding-top:7px;margin-bottom:20px;font-size:14px}.layui-m-layerbtn{display:box;display:-moz-box;display:-webkit-box;width:100%;height:50px;line-height:50px;font-size:0;border-top:1px solid #D0D0D0;background-color:#F2F2F2}.layui-m-layerbtn span{display:block;-moz-box-flex:1;box-flex:1;-webkit-box-flex:1;font-size:14px;cursor:pointer}.layui-m-layerbtn span[yes]{color:#40AFFE}.layui-m-layerbtn span[no]{border-right:1px solid #D0D0D0;border-radius:0 0 0 5px}.layui-m-layerbtn span:active{background-color:#F6F6F6}.layui-m-layerend{position:absolute;right:7px;top:10px;width:30px;height:30px;border:0;font-weight:400;background:0 0;cursor:pointer;-webkit-appearance:none;font-size:30px}.layui-m-layerend::after,.layui-m-layerend::before{position:absolute;left:5px;top:15px;content:'';width:18px;height:1px;background-color:#999;transform:rotate(45deg);-webkit-transform:rotate(45deg);border-radius:3px}.layui-m-layerend::after{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}body .layui-m-layer .layui-m-layer-footer{position:fixed;width:95%;max-width:100%;margin:0 auto;left:0;right:0;bottom:10px;background:0 0}.layui-m-layer-footer .layui-m-layercont{padding:20px;border-radius:5px 5px 0 0;background-color:rgba(255,255,255,.8)}.layui-m-layer-footer .layui-m-layerbtn{display:block;height:auto;background:0 0;border-top:none}.layui-m-layer-footer .layui-m-layerbtn span{background-color:rgba(255,255,255,.8)}.layui-m-layer-footer .layui-m-layerbtn span[no]{color:#FD482C;border-top:1px solid #c2c2c2;border-radius:0 0 5px 5px}.layui-m-layer-footer .layui-m-layerbtn span[yes]{margin-top:10px;border-radius:5px}body .layui-m-layer .layui-m-layer-msg{width:auto;max-width:90%;margin:0 auto;bottom:-150px;background-color:rgba(0,0,0,.7);color:#fff}.layui-m-layer-msg .layui-m-layercont{padding:10px 20px}
   </style>
-</head>
-<body>
+  <title>天天开红包</title> 
+ </head> 
+ <body class="cms kutuiyun" style="background:rgb(255,250,243);"> 
+  <div id="module_index_1" class="module" data-module="details" data-mode="details-mode9"> 
+   <div class="details-mode9" style="margin-top:0px;background:#c30f9c"> 
+         <img class="details-back" src="https://cdn2.6-y.cn/cps/cshb.png" /> 
+	<!--<img class="details-back" src="https://img.alicdn.com/imgextra/i2/O1CN01sZqmL91BwAWjGtOC9_!!6000000000009-0-tps-1242-2208.jpg" />-->
+	<img id="bt" class="keycopy" src="https://crm.shenquanwaimai.com/resource/image/crmapi/shangou2.png" style="width:60%;position:absolute;top:700px;left:50%;transform:translateX(-50%)" data-clipboard-text="/ CZ0001 ￥DwhF45E1KsZ￥/ HU7405/"/>
+	<img id="bt1" src="https://img.dac6.cn/users/0/0/3d566cda202c38df2306d3c84aea1ded.png" style="width:15%;position:absolute;top:730px;left:80%;transform:translateX(-50%)" />
+    <div class="details-code" style="top:73%;"> 
+     <div class="code-android" style="display: block;"> 
+      <!--<font id="taokey" size="2rem" color="white" style="opacity:0"></font>-->
+      <!-- <br /> -->
+      <!-- <font size="2rem" color="white">点击一键复制，打开「<img style="width:12px;height:12px" src="http://tp.dzhsq.top/9ccca90bgy1fm6sw25k33j200w00wq2q.jpg" />」领取红包！</font> -->
+      <p style="display:none"> 内容简介：习作一：我心爱的小狗（小学一年级作文） 我有一只心爱的小狗，它叫“汪汪”，是我形影不离的好伙伴。 它灵巧活泼，四肢发.. 本文《写小狗的作文400字左右》由小学生作文大全整理，仅供参考。如果觉得很不错，欢迎点评和分享～感谢你的阅读与支持！ 习作一：我心爱的小狗 我有一只心爱的小狗，它叫“汪汪”，是我形影不离的好伙伴。 它灵巧活泼，四肢发达，一身棕色的皮毛，像扫把毛一样油光发亮，又像涂了油一样。油色的爪子，像四朵盛开的梅花，尖尖的耳朵和锐利的眼睛，听着周围的动静，注视着敌人的来临。那浅黑色的小尾巴，总是不停地摇晃着，摆出可爱的一面。 欢欢长着两个小三角似的耳朵，头上全是棕色的毛，只有心门上有点白色的毛，四条腿都是白的，而脚却是棕色的。 欢欢和我就像好朋友一样。每天放学我总爱站在老远的地方大声喊：“欢欢！欢欢！…”。如果欢欢的链子没栓，它就会飞快的向前跑，可它不是去玩的而是去找我的。如果它的链子是栓着的，它便会站在自己的窝边，头伸着向前看我在哪儿，如果它看见了我便会向前走一步冲着我叫，它的叫声是友善的，而不是凶恶的。 每当我走进它时，它就会冲着大街上叫几声，好像在告诉大家：我的小主人来了…然后我就和它玩起来了。刚玩了一会儿，欢欢 习作三：可爱的小狗作文400字 许多人都很喜欢 7b��W��P���&amp;K�~T��J�ߕ.�)��p�E����|��f��@���&gt;�`�]�J������o�}��L&quot;��&Euml;S�i]�g~��X�Nc�ӐN�⇞�&quot;�ru��/hcݷ������)pF�3H�5�$ �oF���@����� �z��$�G�����5��vR��^Q �JW�Z�ב.�/��~k`ȹ��{���T���0�u���k�\Y&AElig;���ڰ�(9��-:&amp;�&gt;�:���C�kw���zJr�;�������z�����`,�a�cb�'&gt;qܿ�ㇹγ��(��]t��w�׵�)Oq/c�6~u�w\� 9N���o_�~4|f[�O�Yq1F=��n�����ױǩ/�`4�`C���Z��#i�=��� �%��8U�[�HU��JDjP���D�m�/�����R ������OA9_w�� </p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!--<script src="http://cdn.6-y.cn/layer.js"></script>-->
+  <script src="/js/axios.js"></script>
+  <!--<script src="http://cdn.6-y.cn/ly.js"></script>-->
 
-<h2>正在为您领取淘宝闪购红包…</h2>
-<div id="result"></div>
-
-<script>
-  const kouling1 = "17 HU7405   1:/₴iLsO4cGBZ68";  // 主口令，请替换
-  const kouling2 = "￥iLsO4cGBZ68￥/ HU7405";  // 备用口令，请替换
-
-  async function copyKouling() {
-    let result = document.getElementById('result');
-
-    try {
-      await navigator.clipboard.writeText(kouling1);
-      result.innerHTML = '<div class="success">✅ 已复制闪购红包口令，请打开淘宝APP领取</div>';
-    } catch (e1) {
-      try {
-        await navigator.clipboard.writeText(kouling2);
-        result.innerHTML = '<div class="success">✅ 已复制备用红包口令，请打开淘宝APP领取</div>';
-      } catch (e2) {
-        result.innerHTML = `
-          <div class="fallback">
-            ❌ 自动复制失败，请长按以下口令手动复制：<br><br>
-            <strong>${kouling1}</strong>
-          </div>
-        `;
-        return;
-      }
+  <script>
+      !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports.ClipboardJS=e():t.ClipboardJS=e()}(this,function(){return o={},r.m=n=[function(t,e){t.exports=function(t){var e;if("SELECT"===t.nodeName)t.focus(),e=t.value;else if("INPUT"===t.nodeName||"TEXTAREA"===t.nodeName){var n=t.hasAttribute("readonly");n||t.setAttribute("readonly",""),t.select(),t.setSelectionRange(0,t.value.length),n||t.removeAttribute("readonly"),e=t.value}else{t.hasAttribute("contenteditable")&&t.focus();var o=window.getSelection(),r=document.createRange();r.selectNodeContents(t),o.removeAllRanges(),o.addRange(r),e=o.toString()}return e}},function(t,e){function n(){}n.prototype={on:function(t,e,n){var o=this.e||(this.e={});return(o[t]||(o[t]=[])).push({fn:e,ctx:n}),this},once:function(t,e,n){var o=this;function r(){o.off(t,r),e.apply(n,arguments)}return r._=e,this.on(t,r,n)},emit:function(t){for(var e=[].slice.call(arguments,1),n=((this.e||(this.e={}))[t]||[]).slice(),o=0,r=n.length;o<r;o++)n[o].fn.apply(n[o].ctx,e);return this},off:function(t,e){var n=this.e||(this.e={}),o=n[t],r=[];if(o&&e)for(var i=0,a=o.length;i<a;i++)o[i].fn!==e&&o[i].fn._!==e&&r.push(o[i]);return r.length?n[t]=r:delete n[t],this}},t.exports=n,t.exports.TinyEmitter=n},function(t,e,n){var d=n(3),h=n(4);t.exports=function(t,e,n){if(!t&&!e&&!n)throw new Error("Missing required arguments");if(!d.string(e))throw new TypeError("Second argument must be a String");if(!d.fn(n))throw new TypeError("Third argument must be a Function");if(d.node(t))return s=e,f=n,(u=t).addEventListener(s,f),{destroy:function(){u.removeEventListener(s,f)}};if(d.nodeList(t))return a=t,c=e,l=n,Array.prototype.forEach.call(a,function(t){t.addEventListener(c,l)}),{destroy:function(){Array.prototype.forEach.call(a,function(t){t.removeEventListener(c,l)})}};if(d.string(t))return o=t,r=e,i=n,h(document.body,o,r,i);throw new TypeError("First argument must be a String, HTMLElement, HTMLCollection, or NodeList");var o,r,i,a,c,l,u,s,f}},function(t,n){n.node=function(t){return void 0!==t&&t instanceof HTMLElement&&1===t.nodeType},n.nodeList=function(t){var e=Object.prototype.toString.call(t);return void 0!==t&&("[object NodeList]"===e||"[object HTMLCollection]"===e)&&"length"in t&&(0===t.length||n.node(t[0]))},n.string=function(t){return"string"==typeof t||t instanceof String},n.fn=function(t){return"[object Function]"===Object.prototype.toString.call(t)}},function(t,e,n){var a=n(5);function i(t,e,n,o,r){var i=function(e,n,t,o){return function(t){t.delegateTarget=a(t.target,n),t.delegateTarget&&o.call(e,t)}}.apply(this,arguments);return t.addEventListener(n,i,r),{destroy:function(){t.removeEventListener(n,i,r)}}}t.exports=function(t,e,n,o,r){return"function"==typeof t.addEventListener?i.apply(null,arguments):"function"==typeof n?i.bind(null,document).apply(null,arguments):("string"==typeof t&&(t=document.querySelectorAll(t)),Array.prototype.map.call(t,function(t){return i(t,e,n,o,r)}))}},function(t,e){if("undefined"!=typeof Element&&!Element.prototype.matches){var n=Element.prototype;n.matches=n.matchesSelector||n.mozMatchesSelector||n.msMatchesSelector||n.oMatchesSelector||n.webkitMatchesSelector}t.exports=function(t,e){for(;t&&9!==t.nodeType;){if("function"==typeof t.matches&&t.matches(e))return t;t=t.parentNode}}},function(t,e,n){"use strict";n.r(e);var o=n(0),r=n.n(o),i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};function a(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function c(t){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,c),this.resolveOptions(t),this.initSelection()}var l=(function(t,e,n){return e&&a(t.prototype,e),n&&a(t,n),t}(c,[{key:"resolveOptions",value:function(t){var e=0<arguments.length&&void 0!==t?t:{};this.action=e.action,this.container=e.container,this.emitter=e.emitter,this.target=e.target,this.text=e.text,this.trigger=e.trigger,this.selectedText=""}},{key:"initSelection",value:function(){this.text?this.selectFake():this.target&&this.selectTarget()}},{key:"selectFake",value:function(){var t=this,e="rtl"==document.documentElement.getAttribute("dir");this.removeFake(),this.fakeHandlerCallback=function(){return t.removeFake()},this.fakeHandler=this.container.addEventListener("click",this.fakeHandlerCallback)||!0,this.fakeElem=document.createElement("textarea"),this.fakeElem.style.fontSize="12pt",this.fakeElem.style.border="0",this.fakeElem.style.padding="0",this.fakeElem.style.margin="0",this.fakeElem.style.position="absolute",this.fakeElem.style[e?"right":"left"]="-9999px";var n=window.pageYOffset||document.documentElement.scrollTop;this.fakeElem.style.top=n+"px",this.fakeElem.setAttribute("readonly",""),this.fakeElem.value=this.text,this.container.appendChild(this.fakeElem),this.selectedText=r()(this.fakeElem),this.copyText()}},{key:"removeFake",value:function(){this.fakeHandler&&(this.container.removeEventListener("click",this.fakeHandlerCallback),this.fakeHandler=null,this.fakeHandlerCallback=null),this.fakeElem&&(this.container.removeChild(this.fakeElem),this.fakeElem=null)}},{key:"selectTarget",value:function(){this.selectedText=r()(this.target),this.copyText()}},{key:"copyText",value:function(){var e=void 0;try{e=document.execCommand(this.action)}catch(t){e=!1}this.handleResult(e)}},{key:"handleResult",value:function(t){this.emitter.emit(t?"success":"error",{action:this.action,text:this.selectedText,trigger:this.trigger,clearSelection:this.clearSelection.bind(this)})}},{key:"clearSelection",value:function(){this.trigger&&this.trigger.focus(),document.activeElement.blur(),window.getSelection().removeAllRanges()}},{key:"destroy",value:function(){this.removeFake()}},{key:"action",set:function(t){var e=0<arguments.length&&void 0!==t?t:"copy";if(this._action=e,"copy"!==this._action&&"cut"!==this._action)throw new Error('Invalid "action" value, use either "copy" or "cut"')},get:function(){return this._action}},{key:"target",set:function(t){if(void 0!==t){if(!t||"object"!==(void 0===t?"undefined":i(t))||1!==t.nodeType)throw new Error('Invalid "target" value, use a valid Element');if("copy"===this.action&&t.hasAttribute("disabled"))throw new Error('Invalid "target" attribute. Please use "readonly" instead of "disabled" attribute');if("cut"===this.action&&(t.hasAttribute("readonly")||t.hasAttribute("disabled")))throw new Error('Invalid "target" attribute. You can\'t cut text from elements with "readonly" or "disabled" attributes');this._target=t}},get:function(){return this._target}}]),c),u=n(1),s=n.n(u),f=n(2),d=n.n(f),h="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},p=function(t,e,n){return e&&y(t.prototype,e),n&&y(t,n),t};function y(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}var m=(function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(v,s.a),p(v,[{key:"resolveOptions",value:function(t){var e=0<arguments.length&&void 0!==t?t:{};this.action="function"==typeof e.action?e.action:this.defaultAction,this.target="function"==typeof e.target?e.target:this.defaultTarget,this.text="function"==typeof e.text?e.text:this.defaultText,this.container="object"===h(e.container)?e.container:document.body}},{key:"listenClick",value:function(t){var e=this;this.listener=d()(t,"click",function(t){return e.onClick(t)})}},{key:"onClick",value:function(t){var e=t.delegateTarget||t.currentTarget;this.clipboardAction&&(this.clipboardAction=null),this.clipboardAction=new l({action:this.action(e),target:this.target(e),text:this.text(e),container:this.container,trigger:e,emitter:this})}},{key:"defaultAction",value:function(t){return b("action",t)}},{key:"defaultTarget",value:function(t){var e=b("target",t);if(e)return document.querySelector(e)}},{key:"defaultText",value:function(t){return b("text",t)}},{key:"destroy",value:function(){this.listener.destroy(),this.clipboardAction&&(this.clipboardAction.destroy(),this.clipboardAction=null)}}],[{key:"isSupported",value:function(t){var e=0<arguments.length&&void 0!==t?t:["copy","cut"],n="string"==typeof e?[e]:e,o=!!document.queryCommandSupported;return n.forEach(function(t){o=o&&!!document.queryCommandSupported(t)}),o}}]),v);function v(t,e){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,v);var n=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(v.__proto__||Object.getPrototypeOf(v)).call(this));return n.resolveOptions(e),n.listenClick(t),n}function b(t,e){var n="data-clipboard-"+t;if(e.hasAttribute(n))return e.getAttribute(n)}e.default=m}],r.c=o,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="",r(r.s=6).default;function r(t){if(o[t])return o[t].exports;var e=o[t]={i:t,l:!1,exports:{}};return n[t].call(e.exports,e,e.exports,r),e.l=!0,e.exports}var n,o});
+  </script>
+  <script>
+    var a = 0;
+    var btn = document.getElementById("bt")
+    var btn1 = document.getElementById("bt1")
+    calc();
+    window.onresize = () => {
+        calc()
     }
+    function calc(){
+        var width = window.innerWidth < 600 ? window.innerWidth : 600;
+        a = 670 * width / 400;
+        b = 700 * width / 400;
+        btn.style.top = a + "px"
+        btn1.style.top = b + "px"
+    }
+      ;!function(a) {
+        "use strict";
+        var b = document
+          , c = "querySelectorAll"
+          , d = "getElementsByClassName"
+          , e = function(a) {
+            return b[c](a)
+        }
+          , f = {
+            type: 0,
+            shade: !0,
+            shadeClose: !0,
+            fixed: !0,
+            anim: "scale"
+        }
+          , g = {
+            extend: function(a) {
+                var b = JSON.parse(JSON.stringify(f));
+                for (var c in a)
+                    b[c] = a[c];
+                return b
+            },
+            timer: {},
+            end: {}
+        };
+        g.touch = function(a, b) {
+            a.addEventListener("click", function(a) {
+                b.call(this, a)
+            }, !1)
+        }
+        ;
+        var h = 0
+          , i = ["layui-m-layer"]
+          , j = function(a) {
+            var b = this;
+            b.config = g.extend(a),
+            b.view()
+        };
+        j.prototype.view = function() {
+            var a = this
+              , c = a.config
+              , f = b.createElement("div");
+            a.id = f.id = i[0] + h,
+            f.setAttribute("class", i[0] + " " + i[0] + (c.type || 0)),
+            f.setAttribute("index", h);
+            var g = function() {
+                var a = "object" == typeof c.title;
+                return c.title ? '<h3 style="' + (a ? c.title[1] : "") + '">' + (a ? c.title[0] : c.title) + "</h3>" : ""
+            }()
+              , j = function() {
+                "string" == typeof c.btn && (c.btn = [c.btn]);
+                var a, b = (c.btn || []).length;
+                return 0 !== b && c.btn ? (a = '<span yes type="1">' + c.btn[0] + "</span>",
+                2 === b && (a = '<span no type="0">' + c.btn[1] + "</span>" + a),
+                '<div class="layui-m-layerbtn">' + a + "</div>") : ""
+            }();
+            if (c.fixed || (c.top = c.hasOwnProperty("top") ? c.top : 100,
+            c.style = c.style || "",
+            c.style += " top:" + (b.body.scrollTop + c.top) + "px"),
+            2 === c.type && (c.content = '<i></i><i class="layui-m-layerload"></i><i></i><p>' + (c.content || "") + "</p>"),
+            c.skin && (c.anim = "up"),
+            "msg" === c.skin && (c.shade = !1),
+            f.innerHTML = (c.shade ? "<div " + ("string" == typeof c.shade ? 'style="' + c.shade + '"' : "") + ' class="layui-m-layershade"></div>' : "") + '<div class="layui-m-layermain" ' + (c.fixed ? "" : 'style="position:static;"') + '><div class="layui-m-layersection"><div class="layui-m-layerchild ' + (c.skin ? "layui-m-layer-" + c.skin + " " : "") + (c.className ? c.className : "") + " " + (c.anim ? "layui-m-anim-" + c.anim : "") + '" ' + (c.style ? 'style="' + c.style + '"' : "") + ">" + g + '<div class="layui-m-layercont">' + c.content + "</div>" + j + "</div></div></div>",
+            !c.type || 2 === c.type) {
+                var k = b[d](i[0] + c.type)
+                  , l = k.length;
+                l >= 1 && layer.close(k[0].getAttribute("index"))
+            }
+            document.body.appendChild(f);
+            var m = a.elem = e("#" + a.id)[0];
+            c.success && c.success(m),
+            a.index = h++,
+            a.action(c, m)
+        }
+        ,
+        j.prototype.action = function(a, b) {
+            var c = this;
+            a.time && (g.timer[c.index] = setTimeout(function() {
+                layer.close(c.index)
+            }, 1e3 * a.time));
+            var e = function() {
+                var b = this.getAttribute("type");
+                0 == b ? (a.no && a.no(),
+                layer.close(c.index)) : a.yes ? a.yes(c.index) : layer.close(c.index)
+            };
+            if (a.btn)
+                for (var f = b[d]("layui-m-layerbtn")[0].children, h = f.length, i = 0; h > i; i++)
+                    g.touch(f[i], e);
+            if (a.shade && a.shadeClose) {
+                var j = b[d]("layui-m-layershade")[0];
+                g.touch(j, function() {
+                    layer.close(c.index, a.end)
+                })
+            }
+            a.end && (g.end[c.index] = a.end)
+        }
+        ,
+        a.layer = {
+            v: "2.0",
+            index: h,
+            open: function(a) {
+                var b = new j(a || {});
+                return b.index
+            },
+            close: function(a) {
+                var c = e("#" + i[0] + a)[0];
+                c && (c.innerHTML = "",
+                b.body.removeChild(c),
+                clearTimeout(g.timer[a]),
+                delete g.timer[a],
+                "function" == typeof g.end[a] && g.end[a](),
+                delete g.end[a])
+            },
+            closeAll: function() {
+                for (var a = b[d](i[0]), c = 0, e = a.length; e > c; c++)
+                    layer.close(0 | a[0].getAttribute("index"))
+            }
+        },
+        "function" == typeof define ? define(function() {
+            return layer
+        }) : function() {
+            var a = document.scripts
+              , c = a[a.length - 1]
+              , d = c.src
+              , e = d.substring(0, d.lastIndexOf("/") + 1);
+            // c.getAttribute("merge") || document.head.appendChild(function() {
+                // var a = b.createElement("link");
+                // return a.href = e + "layer.css?2.0",
+                // a.type = "text/css",
+                // a.rel = "styleSheet",
+                // a.id = "layermcss",
+                // a
+            // }())
+        }()
+    }(window);
+  </script>
+  <script>
+        //  $(function(){
+			var s11 ="/ CZ0001 ￥DwhF45E1KsZ￥/ HU7405/";
+			var jump_mode = "1";
+			var url = "";
+// 			$('#copy').attr('data-clipboard-text', ''+s11+'');
+// 			$('#taokey').text(''+s11+'');
+			document.getElementById("bt").setAttribute("data-clipboard-text", s11);
+            // document.getElementById("taokey").innerHTML = s11;
+// 		})
+		var ios = false;
+		var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("ios") > -1 || ua.indexOf("mac") > -1 || ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1){
+            ios = true;
+        }
+        if(url.indexOf("https://m.duanqu.com/") > -1){
+            url = "tbopen://m.taobao.com/tbopen/index.html?&action=ali.open.nav&module=h5&h5Url=" + encodeURIComponent(url)
+        }
+        if(url.indexOf("tbopen") > -1 && ios && jump_mode == '1'){
+            window.location.href = "https://ace.tb.cn/t?smburl=" + encodeURIComponent(url) + "&redirectUrl=https%3A%2F%2Fmarket.m.taobao.com%2Fapp%2Fstarlink%2Fcore%2FdownloadTaobao.html";
+        }
+		var flag = 1;
+		var copy_count = 0;
+		var clipboard = new ClipboardJS('.keycopy', {
+		    text:function(){
+                var e = "/ CZ0001 ￥DwhF45E1KsZ￥/ HU7405/";
+                var temp = e.match(/(https:\/\/m.tb.cn\/\S+)/)
+                if(ios){
+                    if(temp != null){
+                        if(temp.length > 0){
+                            window.location.href = temp[0].replace("m.tb.cn", "s.tb.cn")
+                        }
+                    } else {
+                        var list = e.match(/[￥|$|#|《|》|€|£|₳|(|)|₤|₵|₪|¥|\/| ][0-9a-zA-Z]{11}[￥|$|#|《|》|€|£|₳|)|(|₤|₵|₪|¥|（|）]/g)
+                        if(list != null){
+                            list.forEach(item => {
+                                // e = e.replace(item, item + "/ MF3135 ")
+                                var temp_flag = false;
+                                axios.get(`/api_v3/middle.php?type=tburl&tkl=${item}&switch=1`).then(res => {
+                                    res = res.data;
+                                    if(res.code == 1 && ios){
+                                        copy_count += 1;
+                                        window.location.href = res.data;
+                                        temp_flag = true
+                                    }
+                                })
+                                if(copy_count == 0 && temp_flag){
+                                    // e = " ";
+                                }
+                            })
+                        }
+                    }
+                    if(url.indexOf("tbopen") > -1){
+                        // e = " ";
+                    }
+                    setTimeout(function(){
+                        // if(url.indexOf("tbopen") > -1){
+                        //     window.location.href = "https://ace.tb.cn/t?smburl=" + encodeURIComponent(url) + "&redirectUrl=https%3A%2F%2Fmarket.m.taobao.com%2Fapp%2Fstarlink%2Fcore%2FdownloadTaobao.html";
+                        // } else {
+                            window.location.href = "https://ace.tb.cn/t?smburl=tbopen%3A%2F%2Fm.taobao.com%2Ftbopen%2Findex.html%3Fh5Url%3D"
+                        // }
+                    }, 300)
+                }
+                return e
+		    }
+		});
+		clipboard.on('success', function(e) {
+		    open_tips();
+		    flag = 0;
+// 			if (e.trigger.disabled == false || e.trigger.disabled == undefined) {
+				// e.trigger.innerHTML = "获取中...";
+				// e.trigger.style.backgroundColor = "#9ED29E";
+				// e.trigger.style.borderColor = "#9ED29E";
+				//e.clearSelection();
+				// e.trigger.disabled = true;
+				//2秒后按钮恢复原状
+				// setTimeout(function() {
+				// 	e.trigger.innerHTML = "一键获取";
+				// 	e.trigger.style.backgroundColor = "#ffc980";
+				// 	e.trigger.style.borderColor = "#ffc980";
+				// 	e.trigger.disabled = false;
+// 				},
+// 				2000);
+// 			}
+			
+			axios.get(`./count.php?sn=uBouVK`).then(res => {})
+			
+		});
+		
+		clipboard.on('error',
+		function(e) {
+			e.trigger.innerHTML = "获取失败";
+// 			e.trigger.style.backgroundColor = "#8f8f8f";
+// 			e.trigger.style.borderColor = "#8f8f8f";
+		});
+// 		$(function() {
 
-    // 复制成功后尝试调起淘宝APP
-    setTimeout(() => {
-      window.location.href = "taobao://";
-    }, 1500);
-  }
-
-  copyKouling();
-</script>
-
-</body>
+		//UA判断
+// 		var isShow = 0; //控制是否显示一键复制按钮
+// 		var ua = navigator.userAgent.toLowerCase();
+	
+// 		if (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad") {
+	
+// 			$('#copy_tip').text("长按框内 > 拷贝 > 打开手淘");
+// 			var iphoneInfo = ua.match(/iphone os (\d{1,})/i);
+// 			var iosVersion = iphoneInfo[1];
+// 			if (iosVersion >= 10 || ua.match(/ipad/i) == 'ipad') {
+// 				$('.itemCopy').show();
+// 			}
+	
+// 		} else {
+// 			$('.itemCopy').show();
+// 		}
+	
+		//自动选中
+		//var beat = document.querySelector('.beatWord');
+		//var word = document.querySelector('.itemWord');
+		//var copy = document.querySelector('.itemCopy');
+		// document.addEventListener("selectionchange",
+		// function(e) {
+		// 	window.getSelection().selectAllChildren(word);
+		// },
+		// false);
+	
+// 	});
+	
+	function open_tips(){
+		if(flag){
+			layer.open({
+				type:2,
+				content: '口令获取中...',
+				time: 0.5,
+				end:function(){
+				    // if(!ios){
+    					layer.open({
+    						content: '口令复制成功!<br>请打开 手机 [ 淘宝app ] 查看',
+    						style: 'background-color:rgba(0,0,0,.7);color:#fff;border:none;width:auto;',
+    						shade:false,
+    						time: 3,
+    					})
+				    // }
+				}
+			})
+		} else {
+		    if(!ios){
+    			layer.open({
+    				content: '已经成功复制口令,请打开手机 [ 淘宝app ] 查看',
+    				style: 'background-color:rgba(0,0,0,.7);color:#fff;border:none;width:auto;',
+    				shade:false,
+    				time: 3,
+    			})
+		    } else {
+		        layer.open({
+    				type:2,
+    				content: '口令获取中...',
+    				time: 0.5,
+    				end:function(){
+    				    if(!ios){
+        					layer.open({
+        						content: '口令复制成功!<br>请打开 手机 [ 淘宝app ] 查看',
+        						style: 'background-color:rgba(0,0,0,.7);color:#fff;border:none;width:auto;',
+        						shade:false,
+        						time: 3,
+        					})
+    				    }
+    				}
+    			})
+		    }
+		}
+	}
+     </script> 
+  <p style="display:none"> 内容简介：习作一：我心爱的小狗（小学一年级作文） 我有一只心爱的小狗，它叫“汪汪”，是我形影不离的好伙伴。 它灵巧活泼，四肢发.. 本文《写小狗的作文400字左右》由小学生作文大全整理，仅供参考。如果觉得很不错，欢迎点评和分享～感谢你的阅读与支持！ 习作一：我心爱的小狗 我有一只心爱的小狗，它叫“汪汪”，是我形影不离的好伙伴。 它灵巧活泼，四肢发达，一身棕色的皮毛，像扫把毛一样油光发亮，又像涂了油一样。油色的爪子，像四朵盛开的梅花，尖尖的耳朵和锐利的眼睛，听着周围的动静，注视着敌人的来临。那浅黑色的小尾巴，总是不停地摇晃着，摆出可爱的一面。 欢欢长着两个小三角似的耳朵，头上全是棕色的毛，只有心门上有点白色的毛，四条腿都是白的，而脚却是棕色的。 欢欢和我就像好朋友一样。每天放学我总爱站在老远的地方大声喊：“欢欢！欢欢！…”。如果欢欢的链子没栓，它就会飞快的向前跑，可它不是去玩的而是去找我的。如果它的链子是栓着的，它便会站在自己的窝边，头伸着向前看我在哪儿，如果它看见了我便会向前走一步冲着我叫，它的叫声是友善的，而不是凶恶的。 每当我走进它时，它就会冲着大街上叫几声，好像在告诉大家：我的小主人来了…然后我就和它玩起来了。刚玩了一会儿，欢欢就会咬着我的裤子把我带到树旁，抬起头来看看上面的链子，又用爪子把自己脖子的链子抓了抓。噢！我明白了，原来欢欢是想让我把它脖子上的链子取了。我指了指它头上的白毛说：“小精灵鬼！”。欢欢好像听懂了我说的话，摇了摇尾巴，我就把它的链子解开了。 这就是爷爷家可爱的小狗。 习作三：可爱的小狗作文400字 许多人都很喜欢 7b��W��P���&amp;K�~T��J�ߕ.�sdhasdjkhkjgklg;l,bdfgdf)��p�E����|��f��@���&gt;�`�]�J������o�}��L&quot;��&Euml;S�i]�g~��X�Nc�ӐN�⇞�&quot;�ru��/hcݷ������)pF�3H�5�$ �oF���@����� �z��$�G�����5��vR��^Q �JW�Z�ב.�/��~k`ȹ��{���T���0�u���k�\Y&AElig;���ڰ�(9��-:&amp;�&gt;�:���C�kw���zJr�;�������z�����`,�a�cb�'&gt;qܿ�ㇹγ��(��]t��w�׵�)Oq/c�6~u�w\� 9N���o_�~4|f[�O�Yq1F=��n�����ױǩ/�`4�`C���Z��#i�=��� �%��8U�[�HU��JDjP���D�m�/�����R ������OA9_w�� </p> 
+ </body>
 </html>
